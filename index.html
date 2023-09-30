@@ -10,38 +10,44 @@
 </head>
 <body class="blured">
     <div class="container">
-        <h1>WEATHER TRACKER</h1>
+        <h1>WEATHER TRACKER™</h1>
         <form id="search-form" class="form w-100">
             <h2><input id="search-input" class="form-input w-100" type="text" placeholder="Search City!"></input>
-                <input id="button" type="submit" value="Submit"></input></h2>
-      <div id="result-content"></div>
+                <input id="button" type="submit" value="Submit"></input>
+            </h2>
+            <div class="search-history">
+                <h2>Previous Searches:</h2>
+                <input id="clearbutton" type="submit" value="Clear"></input>
+                <div id="search-history-buttons"></div>
+                
+            </div>
         <h3>
             <span id="time-display"></span>
           </h3>
     </div>
 <header class="header">
     <div class="left-header">
-        <img class="weather-icon large" src="./assets/svg-icons/sun-regular (1).svg" data-current-icon />
+        <img class="weather-icon large" src="./assets/svg-icons/sun-regular (1).svg" id="img1" />
         <div class="header-current-temp">
-           <div><span data-current-temp>69</span>&deg;</div>
+           <div id="day1temp">Load...</div>
         </div>
     </div>
     <div class="right-header">
         <div class="info-group">
             <div class="label">High</div>
-            <div><span data-current-high>75</span>&deg;</div>
+            <div id="day1high"><span>75</span>&deg;</div>
         </div>
         <div class="info-group">
             <div class="label">Humidity</div>
-            <div><span data-current-humididty>65</span>%</div>
+            <div id="day1humidity" ><span data-current-humididty>65</span>%</div>
         </div>
         <div class="info-group">
             <div class="label">Wind</div>
-            <div><span data-current-wind>5</span>mph</div>
+            <div id="day1wind" ><span data-current-wind>5</span>mph</div>
         </div>
         <div class="info-group">
             <div class="label">Low</div>
-            <div><span data-current-low>65</span>&deg;</div>
+            <div id="day1low"><span>65</span>&deg;</div>
         </div>
     </div>
 

@@ -6,14 +6,18 @@
 
 body {
 margin: 0;
-background-color: rgb(221, 118, 118);
-color: rgb(108, 20, 20);
+background: #2795D3;
+background: linear-gradient(135deg, #2795D3, #8B9DED);
+color: rgb(20, 30, 108);
 font-family: sans-serif;
 }
 
+
+
+
 h1 {
     font-size: 40px;
-    color: rgb(5, 3, 3);
+    color: rgb(20, 30, 108);
 }
 
 h2 {
@@ -52,8 +56,39 @@ align-items: center;
 justify-content: center;
 margin: 0.5rem;
 padding: 0.5rem;
-border-right: 2px solid rgb(108, 20, 20);
+border-right: 2px solid rgb(20, 30, 108);
 }
+
+/* Add this CSS to your style.css file */
+.search-history {
+    margin-top: 20px;
+}
+
+#search-history-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#search-history-buttons button {
+    background-color: #3498db;
+    color: #fff;
+    border: 1px solid rgb(20, 30, 108);
+    border-radius: 5px ;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#search-history-buttons button:hover {
+    background-color: #11344c;
+}
+
+#search-history-buttons button:focus {
+    outline: none;
+}
+
+
 
 .weather-icon {
     width: 100px;
@@ -62,8 +97,8 @@ border-right: 2px solid rgb(108, 20, 20);
 }
 
 .weather-icon.large {
-    width: 110px;
-    height: 110px;
+    width: 160px;
+    height: 160px;
 }
 
 .header-current-temp {
@@ -104,7 +139,7 @@ border-right: 2px solid rgb(108, 20, 20);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgb(108, 20, 20);
+    border: 1px solid rgb(20, 30, 108);
     padding: .1rem;
     border-radius: 0.5rem;
     width: 100%;

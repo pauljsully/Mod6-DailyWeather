@@ -11,7 +11,13 @@ color: rgb(108, 20, 20);
 font-family: sans-serif;
 }
 
+.container {
+width: 30%;
+align-items: center;
+justify-content: center;
+padding-left: 5%;
 
+}
   
 
 .header {
@@ -21,7 +27,7 @@ font-family: sans-serif;
 
 .left-header {
 display: flex;
-width: 20%;
+width: 30%;
 align-items: center;
 justify-content: center;
 margin: 0.5rem;

@@ -31,10 +31,7 @@ h3 {
 font-size: 15px;
 }
 
-.blurred {
-    filter: blur(3px);
-    overflow: hidden;
-}
+
 
 
 .container {
@@ -48,6 +45,10 @@ padding-left: 5%;
 .header {
     display: flex;
     align-items: center;
+    padding: .5rem;
+    border-radius: 10rem;
+    width: 90%;
+    background: linear-gradient(200deg, #2795D3, #8B9DED)
 }
 
 .left-header {
@@ -57,7 +58,7 @@ align-items: center;
 justify-content: center;
 margin: 0.5rem;
 padding: 0.5rem;
-border-right: 2px solid rgb(20, 30, 108);
+margin-right: 3.5rem;
 }
 
 /* Add this CSS to your style.css file */
@@ -105,21 +106,26 @@ border-right: 2px solid rgb(20, 30, 108);
 .header-current-temp {
     font-size: 2rem;
     margin-left: 1rem;
+    font-size: 3.5vw;
 }
 
 .right-header {
     display: grid;
-    width: 50%;
+    width: 45%;
     justify-content: space-around;
     gap: 0.5rem;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
+    border-left: 2px solid rgb(20, 30, 108);
 }
 
 .info-group {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1; /* Allow items to grow and shrink equally */
+    flex-shrink: 1;
+    text-align: center; 
 }
 
 .label {
@@ -134,17 +140,18 @@ border-right: 2px solid rgb(20, 30, 108);
     gap: 0.5rem;
     justify-content: center;
     padding: 3rem;
+   padding-right: 200px;
 }
 
 .day-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgb(20, 30, 108);
-    padding: .1rem;
-    border-radius: 0.5rem;
+    border: 1px ;
+    padding: .5rem;
+    border-radius: 0.7rem;
     width: 100%;
-    
+    background: linear-gradient(-35deg, #2795D3, #8B9DED)
 }
 
 .day-card-day {

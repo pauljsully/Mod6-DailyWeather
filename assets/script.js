@@ -58,6 +58,8 @@
             console.error('Error fetching weather data:', error);
           });
 
+          
+
           var d = new Date();
           var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
@@ -80,10 +82,16 @@
         event.preventDefault();
         var city = document.getElementById('search-input').value;
         fetchWeatherData(city);
-        currentWeather.innerHTML = "Current Weather in "+ city
+        currentWeather.innerHTML = "Current Weather in "+ city;
       });
 
-      // JavaScript code
+      window.onload = function() {
+        var defaultCity = "Cupertino";
+        location.value = defaultCity;
+        fetchWeatherData(defaultCity); // Fetch weather data for the default city on page load
+        currentWeather.innerHTML = "Current Weather in " + defaultCity;
+    };
+
 
 // Function to handle form submission
 function handleSubmit(event) {

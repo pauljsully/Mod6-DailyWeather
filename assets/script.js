@@ -2,6 +2,7 @@
     var timeDisplayEl = $('#time-display');
     var location = document.getElementById('search-input');
     var button = document.getElementById('button');
+    var currentWeather = document.getElementById('currentweather');
 
     function displayTime() {
         var rightNow = dayjs().format('dddd, MMM DD, YYYY [at] hh:mm:ss a');
@@ -47,7 +48,7 @@
             }
 
 
-            
+
             for(var i=0;i<6;i++){
                 document.getElementById("img" +(i+1)).src ="https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon+".png";
             }
@@ -79,6 +80,7 @@
         event.preventDefault();
         var city = document.getElementById('search-input').value;
         fetchWeatherData(city);
+        currentWeather.innerHTML = "Current Weather in "+ city
       });
 
       // JavaScript code

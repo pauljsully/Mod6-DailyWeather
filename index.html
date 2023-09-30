@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Weather Tracker</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1>Weather Tracker</h1>
+    </div>
+    <div class="left-header">
+        <img class="weather-icon large" src="./assets/svg-icons/sun-regular (1).svg" data-current-icon />
+        <div class="header-current-temp">
+           <div><span data-current-temp>69</span>&deg;</div>
+        </div>
+    </div>
+    <div class="right-header">
+        <div class="info-group">
+            <div class="label">High</div>
+            <div><span data-current-high>75</span>&deg;</div>
+        </div>
+        <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-current-humididty>65</span>%</div>
+        </div>
+        <div class="info-group">
+            <div class="label">Wind</div>
+            <div><span data-current-wind>5</span>mph</div>
+        </div>
+        <div class="info-group">
+            <div class="label">Low</div>
+            <div><span data-current-low>65</span>&deg;</div>
+        </div>
+    </div>
+
+</header>
+
+
+<script type="module" src="./assets/script.js"></script>
+
+</body>
+</html>

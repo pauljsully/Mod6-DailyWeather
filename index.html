@@ -11,9 +11,13 @@
 <body class="blured">
     <div class="container">
         <h1>WEATHER TRACKER</h1>
-        <h2><br />
+        <form id="search-form" class="form w-100">
+            <h2><input id="search-input" class="form-input w-100" type="text" placeholder="Search City!"></input>
+                <input id="button" type="submit" value="Submit"></input></h2>
+      <div id="result-content"></div>
+        <h3>
             <span id="time-display"></span>
-          </h2>
+          </h3>
     </div>
 <header class="header">
     <div class="left-header">
@@ -45,29 +49,39 @@
 
 <section class="five-day-section" data-day-section>
     <div class="day-card">
-        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon"/>
-        <div class="day-card-day">Saturday</div>
-        <div>62&deg;</div>
+        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon" id="img2"/>
+        <div id="day2" class="day-card-day">Saturday</div>
+        <div id="day2temp">Loading...</div>
+        <div id="day2wind">Loading...</div>
+        <div id="day2humidity">Loading...</div>
     </div>
     <div class="day-card">
-        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon"/>
-        <div class="day-card-day">Sunday</div>
-        <div>62&deg;</div>
+        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon" id="img3"/>
+        <div id="day3" class="day-card-day">Sunday</div>
+        <div id="day3temp">Loading...</div>
+        <div id="day3wind">Loading...</div>
+        <div id="day3humidity">Loading...</div>
     </div>
     <div class="day-card">
-        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon"/>
-        <div class="day-card-day">Monday</div>
-        <div>62&deg;</div>
+        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon" id="img4"/>
+        <div id="day4" class="day-card-day">Monday</div>
+        <div id="day4temp">Loading...</div>
+        <div id="day4wind">Loading...</div>
+        <div id="day4humidity">Loading...</div>
     </div>
     <div class="day-card">
-        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon"/>
-        <div class="day-card-day">Tuesday</div>
-        <div>62&deg;</div>
+        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon" id="img5"/>
+        <div id="day5" class="day-card-day">Tuesday</div>
+        <div id="day5temp">Loading...</div>
+        <div id="day5wind">Loading...</div>
+        <div id="day5humidity">Loading...</div>
     </div>
     <div class="day-card">
-        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon"/>
-        <div class="day-card-day">Wednesday</div>
-        <div>62&deg;</div>
+        <img src="./assets/svg-icons/cloud-bolt-solid.svg" class="weather-icon" id="img6"/>
+        <div id="day6" class="day-card-day">Wednesday</div>
+        <div id="day6temp">Loading...</div>
+        <div id="day6wind">Loading...</div>
+        <div id="day6humidity">Loading...</div>
     </div>
 </section>
 

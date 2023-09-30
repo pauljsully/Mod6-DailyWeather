@@ -11,6 +11,10 @@ color: rgb(108, 20, 20);
 font-family: sans-serif;
 }
 
+h2 {
+font-size: 15px;
+}
+
 .blurred {
     filter: blur(3px);
     overflow: hidden;

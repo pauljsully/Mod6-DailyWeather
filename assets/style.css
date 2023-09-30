@@ -11,6 +11,12 @@ color: rgb(108, 20, 20);
 font-family: sans-serif;
 }
 
+.blurred {
+    filter: blur(3px);
+    overflow: hidden;
+}
+
+
 .container {
 width: 30%;
 align-items: center;
@@ -70,4 +76,27 @@ border-right: 2px solid rgb(108, 20, 20);
     text-transform: uppercase;
     font-weight: bold;
     color: rgb(5, 3, 3);
+}
+
+.five-day-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 75px);
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 2rem;
+    
+}
+
+.day-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(108, 20, 20);
+    padding: 0.65rem;
+    border-radius: 0.5rem;
+}
+
+.day-card-day {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
 }

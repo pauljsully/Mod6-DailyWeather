@@ -53,6 +53,8 @@
                 document.getElementById("img" +(i+1)).src ="https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon+".png";
             }
 
+            console.log(data);
+
           })
           .catch((error) => {
             console.error('Error fetching weather data:', error);

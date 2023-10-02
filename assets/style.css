@@ -35,7 +35,7 @@ font-size: 15px;
 .submitbutton {
     color: white;
     background-color: #2795D3;
-    border: 1px solid white;
+    border: 1px solid rgb(20, 30, 108);
     border-radius: 5px;
     cursor: pointer;
 }

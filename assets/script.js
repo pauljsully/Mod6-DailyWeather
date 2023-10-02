@@ -12,7 +12,24 @@
     displayTime();
     setInterval(displayTime, 1000);
 
+function fetchCurrentWeather(city){
 
+  var weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4f360382098bb9e1dd871fb474d6815f&units=imperial`;
+
+  fetch(weatherURL) 
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+
+              document.getElementById("day1high").innerHTML = Number(data.main.temp_max).toFixed(0)+"&deg;F";
+    
+              document.getElementById("day1low").innerHTML = Number(data.main.temp_min).toFixed(0)+"&deg;F";
+
+              document.getElementById("day1wind").innerHTML = Number(data.wind.speed).toFixed(1)+" mph";
+
+              document.getElementById("day1humidity").innerHTML = Number(data.main.humidity).toFixed(0)+"%";
+            });
+}
 
     function fetchWeatherData(city) {
         var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=4f360382098bb9e1dd871fb474d6815f&units=imperial`;
@@ -24,29 +41,16 @@
                 document.getElementById("day" +(i+1)+ "temp").innerHTML = Number(data.list[i].main.temp).toFixed(0)+"&deg;F";
             }
 
-            for(var i=0;i<1;i++){
-                document.getElementById("day1high").innerHTML = Number(data.list[i].main.temp_max).toFixed(0)+"&deg;F";
-            }
-            for(var i=0;i<1;i++){
-                document.getElementById("day1low").innerHTML = Number(data.list[i].main.temp_min).toFixed(0)+"&deg;F";
-            }
-
 
             for(var i=1;i<6;i++){
                 document.getElementById("day" +(i+1)+ "wind").innerHTML = "Wind: " + Number(data.list[i].wind.speed).toFixed(1)+" mph";
             }
-            for(var i=0;i<1;i++){
-                document.getElementById("day" +(i+1)+ "wind").innerHTML = Number(data.list[i].wind.speed).toFixed(1)+" mph";
-            }
+            
 
 
             for(var i=1;i<6;i++){
                 document.getElementById("day" +(i+1)+ "humidity").innerHTML = "Humidity: " + Number(data.list[i].main.humidity).toFixed(0)+"%";
             }
-            for(var i=0;i<1;i++){
-                document.getElementById("day" +(i+1)+ "humidity").innerHTML = Number(data.list[i].main.humidity).toFixed(0)+"%";
-            }
-
 
 
             for(var i=0;i<6;i++){
@@ -84,6 +88,7 @@
         event.preventDefault();
         var city = document.getElementById('search-input').value;
         fetchWeatherData(city);
+        fetchCurrentWeather(city);
         currentWeather.innerHTML = "Current Weather in "+ city;
       });
 
